@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form Registration</title>
+        <style>
+            form{
+                position: relative;
+                margin: auto;
+                /* border: 1px solid; */
+                box-shadow: 5px 5px 10px 5px gray;
+            }
+            .row{
+                display: flex;
+                padding-bottom: 15px;
+            }
+            .col-1{
+                flex: 1;
+                padding-right: 5px;
+                text-align: right;
+            }
+            .col-2{
+                flex: 3;
+            }
+        </style>
+    </head>
+    <body>
+
+        <form action="" style="width: 450px;">
+            <h1 style="padding-left: 10px;">Registratrion Form</h1>
+           <div class="row">
+                <div class="col-1">
+                    Name:
+                </div>
+                <div class="col-2">
+                    <span>
+                        <input type="text" placeholder="Alphabates only" name="txtName" id="txtName" style="width: 80%"/><br>
+                        <span id="statusOfName"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    Country:
+                </div>
+                <div class="col-2">
+                    <select name="countries" id="countries">
+                        <option value="">(Please select a country)</option>
+                        <option value="VietNam">Việt Nam</option>
+                        <option value="Korea">Hàn Quốc</option>
+                        <option value="Japan">Nhật Bản</option>
+                    </select><br>
+                    <span id="statusOfCountry"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    Email:
+                </div>
+                <div class="col-2">
+                    <input type="text" placeholder="Must be a valid email" name="txtEmail" id="txtEmail" style="width:80%"><br>
+                    <span id="statusOfEmail"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">Sex:</div>
+                <div class="col-2">
+                    <input type="radio" name="txtSex" id="sexMale" value="Male">
+                    <label for="sexMale">Male</label>
+                    <input type="radio" name="txtSex" id="sexFemale" value="Female">
+                    <label for="sexFemale">Female</label><br>
+                    <span id="statusOfSex"></span>
+                </div>
+            </div>
+            <div class="row" style="justify-content: center;">
+                <input
+                    type="submit"
+                    name="btnRegister"
+                    id="btnRegister"
+                    value="Submit"
+                    disabled
+                />
+            </div>
+        </form>
+
+        <!-- Script -->
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
+
